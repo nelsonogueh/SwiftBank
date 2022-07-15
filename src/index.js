@@ -24,7 +24,7 @@ import './vendors/iconfonts/font-awesome/css/font-awesome.css';
 import './vendors/iconfonts/mdi/css/materialdesignicons.min.css';
 
 
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { BrowserRouter, Switch, Routes, Route} from 'react-router-dom';
 
 import { withRouter } from "react-router";
 
@@ -43,16 +43,16 @@ class Main extends React.Component {
         return (
             <BrowserRouter>
 
-                <main>
-						<Route path="/" exact component={Dashboard}/>
-						<Route path="/dashboard" exact component={Dashboard}/>
-                        <Route path="/withdraw" exact component={Withdrawal}/>
-                        <Route path="/transfer" exact component={Transfer}/>
-                        <Route path="/airtime" exact component={Airtime}/>
-                        <Route path="/paybills" exact component={PayBills}/>
+                <Routes>
+						<Route path="/" exact element={<Dashboard />}/>
+						<Route path="/dashboard" exact element={<Dashboard  />}/>
+                        <Route path="/withdraw" exact element={<Withdrawal />}/>
+                        <Route path="/transfer" exact element={<Transfer />}/>
+                        <Route path="/airtime" exact element={<Airtime />}/>
+                        <Route path="/paybills" exact element={<PayBills />}/>
                     {//<Route component={NotFound}/>
                          }
-                </main>
+                </Routes>
 
             </BrowserRouter>
         );

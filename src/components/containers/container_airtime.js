@@ -217,8 +217,6 @@ class ContainerAirtime extends React.Component {
 
             </div>
 
-
-
         );
     }
 }
